@@ -64,10 +64,11 @@ jQuery(document).ready(function(){
 	        },
 	        error: function(response){
 				
-	        	alert(response); 
+	        	//alert(response); 
 	        	
-	        	return false;
-				var arg = JSON.parse(response);
+	        	//return false;
+	        	var arg = response;
+				//var arg = JSON.parse(response);
 				alert(JSON.stringify(arg));
 				$('#testing').html(response);
 				
