@@ -39,17 +39,10 @@ jQuery(document).ready(function(){
 	      	dataType:'application/json; charset=utf-8',
 	        data: postData,
 	        success: function(response){
-				//alert('eee');
-				alert(response); 
-	        	
-	        	return false;
-				var arg = JSON.parse(response);
-				alert(JSON.stringify(arg));
-				//$('#testing').html(response);
-				//alert()
-				//$('.squeeze_wrapper').html("");
-				//$('.squeeze_wrapper').html("<div class='no_data'>Submit Successfully</div>");
-				alert('amritpal tsing');
+					
+	        	var argtt = response.responseText;
+				var arg = JSON.parse(response.responseText);
+
 				if(arg.success==1)
 				{
 					$('.squeeze_wrapper').html("");
@@ -64,16 +57,9 @@ jQuery(document).ready(function(){
 	        },
 	        error: function(response){
 				
-	        	//alert(response); 
-	        	
-	        	//return false;
-	        	
 	        	var argtt = response.responseText;
 				var arg = JSON.parse(response.responseText);
-				alert(JSON.stringify(arg));
-				$('#testing').html(argtt);
-				
-				alert('amritpal tsing');
+
 				if(arg.success==1)
 				{
 					$('.squeeze_wrapper').html("");

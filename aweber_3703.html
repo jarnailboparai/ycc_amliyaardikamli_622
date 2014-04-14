@@ -80,27 +80,13 @@ jQuery(document).ready(function(){
 
 	        success: function(response){
 
-				//alert('eee');
+					
 
-				alert(response); 
+	        	var argtt = response.responseText;
 
-	        	
+				var arg = JSON.parse(response.responseText);
 
-	        	return false;
 
-				var arg = JSON.parse(response);
-
-				alert(JSON.stringify(arg));
-
-				//$('#testing').html(response);
-
-				//alert()
-
-				//$('.squeeze_wrapper').html("");
-
-				//$('.squeeze_wrapper').html("<div class='no_data'>Submit Successfully</div>");
-
-				alert('amritpal tsing');
 
 				if(arg.success==1)
 
@@ -130,25 +116,11 @@ jQuery(document).ready(function(){
 
 				
 
-	        	//alert(response); 
-
-	        	
-
-	        	//return false;
-
-	        	
-
 	        	var argtt = response.responseText;
 
 				var arg = JSON.parse(response.responseText);
 
-				alert(JSON.stringify(arg));
 
-				$('#testing').html(argtt);
-
-				
-
-				alert('amritpal tsing');
 
 				if(arg.success==1)
 
