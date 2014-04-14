@@ -40,6 +40,9 @@ jQuery(document).ready(function(){
 	        data: postData,
 	        success: function(response){
 				//alert('eee');
+				alert(response); 
+	        	
+	        	return false;
 				var arg = JSON.parse(response);
 				alert(JSON.stringify(arg));
 				//$('#testing').html(response);
@@ -61,6 +64,9 @@ jQuery(document).ready(function(){
 	        },
 	        error: function(response){
 				
+	        	alert(response); 
+	        	
+	        	return false;
 				var arg = JSON.parse(response);
 				alert(JSON.stringify(arg));
 				$('#testing').html(response);
