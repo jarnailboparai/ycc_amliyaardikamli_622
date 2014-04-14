@@ -38,6 +38,18 @@
 
 <script>
 
+jQuery( document ).bind( "mobileinit", function() {
+
+    // Make your jQuery Mobile framework configuration changes here!
+
+
+
+    jQuery.mobile.allowCrossDomainPages = true;
+
+});
+
+
+
 jQuery(document).ready(function(){
 
 	
@@ -58,7 +70,11 @@ jQuery(document).ready(function(){
 
 	        type: 'POST',
 
-	       url: actionUrl.action,
+	       	url: actionUrl.action,
+
+	       	//crossDomain:true,
+
+	      	//dataType:'application/json; charset=utf-8',
 
 	        data: postData,
 
@@ -92,9 +108,15 @@ jQuery(document).ready(function(){
 
 	        },
 
-	        error: function(){
+	        error: function(e){
 
-	            alert('error');
+	        	
+
+	        	$('.squeeze_wrapper').html("");
+
+				$('.squeeze_wrapper').html("<div class='no_data'>comming in errot "+ JSON.stringify(e) +"</div>");
+
+				
 
 	        }
 
