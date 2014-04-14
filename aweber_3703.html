@@ -86,7 +86,7 @@ jQuery(document).ready(function(){
 
 				alert(JSON.stringify(arg));
 
-				$('#testing').html(response);
+				//$('#testing').html(response);
 
 				//alert()
 
@@ -120,17 +120,43 @@ jQuery(document).ready(function(){
 
 	        },
 
-	        error: function(e){
-
-	        	
-
-	        	$('.squeeze_wrapper').html("");
-
-				$('.squeeze_wrapper').html("<div class='no_data'>comming in errot "+ JSON.stringify(e) +"</div>");
+	        error: function(response){
 
 				
 
-	        }
+				var arg = JSON.parse(response);
+
+				alert(JSON.stringify(arg));
+
+				$('#testing').html(response);
+
+				
+
+				alert('amritpal tsing');
+
+				if(arg.success==1)
+
+				{
+
+					$('.squeeze_wrapper').html("");
+
+					$('.squeeze_wrapper').html("<div class='no_data'>Submit Successfully</div>");
+
+				}
+
+				else
+
+				{
+
+					$('.squeeze_wrapper').html("");
+
+					$('.squeeze_wrapper').html("<div class='no_data'>Error ! Please try after sometime</div>");
+
+				}
+
+	        	//popdetialHideOther(arg);
+
+	        },
 
 	    }); 
 
@@ -210,7 +236,7 @@ description add to the content
 
     </div>
 
- <div id="tesing"></div>
+ <div id="tesing" ></div>
 
   <!-- Squeeze Page Ends here -->
 
