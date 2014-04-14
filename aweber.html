@@ -22,6 +22,15 @@ jQuery( document ).bind( "mobileinit", function() {
     // Make your jQuery Mobile framework configuration changes here!
 
     jQuery.mobile.allowCrossDomainPages = true;
+
+});
+
+$(document).ajaxStart(function() {
+    $.mobile.loading('show');
+});
+
+$(document).ajaxStop(function() {
+    $.mobile.loading('hide');
 });
 
 jQuery(document).ready(function(){

@@ -46,6 +46,24 @@ jQuery( document ).bind( "mobileinit", function() {
 
     jQuery.mobile.allowCrossDomainPages = true;
 
+
+
+});
+
+
+
+$(document).ajaxStart(function() {
+
+    $.mobile.loading('show');
+
+});
+
+
+
+$(document).ajaxStop(function() {
+
+    $.mobile.loading('hide');
+
 });
 
 
