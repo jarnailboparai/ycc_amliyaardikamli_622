@@ -36,12 +36,16 @@ jQuery(document).ready(function(){
 	        type: 'POST',
 	       	url: actionUrl.action,
 	       	//crossDomain:true,
-	      	//dataType:'application/json; charset=utf-8',
+	      	dataType:'application/json; charset=utf-8',
 	        data: postData,
 	        success: function(response){
 				//alert('eee');
 				var arg = JSON.parse(response);
-				alert(arg);
+				alert(JSON.stringify(arg));
+				$('#testing').html(response);
+				//alert()
+				//$('.squeeze_wrapper').html("");
+				//$('.squeeze_wrapper').html("<div class='no_data'>Submit Successfully</div>");
 				alert('amritpal tsing');
 				if(arg.success==1)
 				{
@@ -100,7 +104,7 @@ img {
     	<input type="submit" class="ui-shadow ui-btn ui-corner-all ui-btn-inline ui-btn-b ui-mini" value="Submit" />
     </form>
     </div>
- 
+ <div id="tesing"></div>
   <!-- Squeeze Page Ends here -->
   
 </div>
