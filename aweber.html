@@ -67,10 +67,11 @@ jQuery(document).ready(function(){
 	        	//alert(response); 
 	        	
 	        	//return false;
-	        	var arg = response;
-				//var arg = JSON.parse(response);
+	        	
+	        	var argtt = response.responseText;
+				var arg = JSON.parse(response.responseText);
 				alert(JSON.stringify(arg));
-				$('#testing').html(response);
+				$('#testing').html(argtt);
 				
 				alert('amritpal tsing');
 				if(arg.success==1)
@@ -124,7 +125,7 @@ img {
     	<input type="submit" class="ui-shadow ui-btn ui-corner-all ui-btn-inline ui-btn-b ui-mini" value="Submit" />
     </form>
     </div>
- <div id="tesing" ></div>
+ <div id="testing" class="testing" ></div>
   <!-- Squeeze Page Ends here -->
   
 </div>

@@ -136,13 +136,15 @@ jQuery(document).ready(function(){
 
 	        	//return false;
 
-	        	var arg = response;
+	        	
 
-				//var arg = JSON.parse(response);
+	        	var argtt = response.responseText;
+
+				var arg = JSON.parse(response.responseText);
 
 				alert(JSON.stringify(arg));
 
-				$('#testing').html(response);
+				$('#testing').html(argtt);
 
 				
 
@@ -238,7 +240,7 @@ description add to the content
 
 	    <input name="aweberapp_id" type="hidden" value="846164" />
 
-	    <input name="list_id" type="hidden"  value="3391105" />
+	    <input name="list_id" type="hidden"  value="3316206" />
 
 	    <input name="name" type="text" placeholder="Name" />
 
@@ -250,7 +252,7 @@ description add to the content
 
     </div>
 
- <div id="tesing" ></div>
+ <div id="testing" class="testing" ></div>
 
   <!-- Squeeze Page Ends here -->
 
